@@ -65,8 +65,8 @@
 
 <div class="jumbotron">
   <div class="container-fluid text-center" style="height: 400px; ">
-    <h1>Smart Health Monitoring</h1>      
-    <p>For free 24x7....</p>
+    <h1 style="color:white; font-family:serif;">Smart Health Monitoring</h1>      
+    <p style="color:white; font-family:Helvetica Neue;">A smart symptons detector</p>
   </div>
 </div>
 
