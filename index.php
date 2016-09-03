@@ -13,7 +13,7 @@
   	.jumbotron {
       /*margin-bottom: 30px; */
       
-      margin-top: 50px;
+      /*margin-top: 50px;*/
       color: black;
       background: url("smart_health_pics/pics/maxresdefault.jpg") no-repeat center center; 
      -webkit-background-size: 100% 100%;
@@ -24,9 +24,12 @@
      }
 
      .navbar{
-    background-color:green;
-    border-color: green;
-   
+    background-color: transparent;
+    border-style: none;    
+    color:green;
+    height: 75px;
+    text-align: center;
+    font-family: sans-serif;
 }
 
   </style>
@@ -46,7 +49,7 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="index2.php">Home</a></li>
+        <li class="active"><a href="#">Home</a></li>
    
         <li><a href="#"><span class="glyphicon glyphicon-search"></span> Search</a></li>     
       </ul>
@@ -69,8 +72,6 @@
     <p style="color:white; font-family:Helvetica Neue;">Your next step in health and wellness</p>
   </div>
 </div>
-
-
 
 
 </body>
