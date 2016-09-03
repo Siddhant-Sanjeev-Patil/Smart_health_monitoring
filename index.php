@@ -30,7 +30,13 @@
     height: 75px;
     text-align: center;
     font-family: sans-serif;
-}
+
+
+     }
+
+     .active{
+     	background-color:  green;
+     } 
 
   </style>
  </head>
@@ -49,16 +55,16 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
+        <li class="active "><a href="#">Home</a></li>
    
         <li><a href="#"><span class="glyphicon glyphicon-search"></span> Search</a></li>     
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="signup.php"><span class="glyphicon glyphicon-user"></span> SignUp</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> SignUp</a></li>
 
         <li><a href="#myModal" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in" ></span> Login</a></li>
-        <li><a href="aboutus.php"><span class="glyphicon glyphicon-menu-hamburger"></span> AboutUs</a></li>  
-        <li><a href="contactus.php"><span class="glyphicon glyphicon-earphone"></span> ContactUs</a></li>       
+        <li><a href="#"><span class="glyphicon glyphicon-menu-hamburger"></span> AboutUs</a></li>  
+        <li><a href="#"><span class="glyphicon glyphicon-earphone"></span> ContactUs</a></li>       
 
       </ul>
     </div>
@@ -67,11 +73,24 @@
 
 
 <div class="jumbotron">
-  <div class="container-fluid text-center" style="height: 400px; ">
+  <div class="container-fluid text-center" style="height: 470px; ">
     <h1 style="color:white; font-family:serif;">Smart Health Monitoring</h1>      
     <p style="color:white; font-family:Helvetica Neue;">Your next step in health and wellness</p>
   </div>
 </div>
+
+
+<div class="container-fluid text-center" style="background-color: #CFEDC9">
+	<div id="brief">
+	<h2 style="text-align: center; color:green ; ";>What we offer?</h2>
+	<p style="font-size: 18px; ">
+		We give you access to a highly sophisticated medical recommendation tool. Using the latest searching technologies,the system can take a pattern of symptoms in everyday language and instantly compute from our vast database , the most likely ones. It is based on the same system that is relied on by doctors and nurses around the world to help with diagnosis. 
+		We enable you to make sense of your symptoms. It will change the way you speak to your doctor forever. 
+	</p>	
+	</div>
+</div>
+
+
 
 
 </body>
