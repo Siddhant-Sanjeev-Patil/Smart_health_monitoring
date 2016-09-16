@@ -30,6 +30,7 @@
     height: 75px;
     text-align: center;
     font-family: sans-serif;
+    
 
 
      }
