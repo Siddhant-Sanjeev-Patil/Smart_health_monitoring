@@ -19,7 +19,7 @@
 					
 				}
     		   body{
-						/*background: url('weather.jpg') no-repeat center center fixed;*/
+						
 						-webkit-background-size: cover;
 						-moz-background-size: cover;
 						-o-background-size: cover;
@@ -34,7 +34,7 @@
    <div class="container" id="entry" >
       <form class="form-group " method="post">
         <label for="location"><h3>Find the doctor at...</h3></label>
-        	<input type="text" id="location" name="location" class="form-control" placeholder="enter the address city here.."> <hr>      	
+        	<input type="text" id="location" name="location" class="form-control" placeholder="enter the address here.."> <hr>      	
           <div class="col-xs-6 col-sm-6 col-md-6">
               <input type="submit" name="submit_mes" value="submit" class="btn btn-lg btn-success btn-block">
           </div>
@@ -43,16 +43,7 @@
 
     
 
-    <!--<div class="container" id="weather_data">
-        <h3 >Weather</h3>
-        <ul id="nytimes-articles" class="article-list">weather here</ul>
-    </div>
-
-    <div class="container" id="news_data">
-        <h3 >Recent news</h3>
-        <ul >news here</ul>
-    </div>
-    -->
+  
   	<div class="container row" >
 
   		<div class="col-md-6" id="weather_today">
