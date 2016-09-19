@@ -61,11 +61,11 @@
         <li><a href="#"><span class="glyphicon glyphicon-search"></span> Search</a></li>     
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> SignUp</a></li>
+        <li style="font-weight:bold"><a href="signup.php"><span class="glyphicon glyphicon-user"></span> SignUp</a></li>
 
-        <li><a href="#myModal" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in" ></span> Login</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-menu-hamburger"></span> AboutUs</a></li>  
-        <li><a href="#"><span class="glyphicon glyphicon-earphone"></span> ContactUs</a></li>       
+        <li style="font-weight:bold"><a href="#myModal" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in" ></span> Login</a></li>
+        <li style="font-weight:bold"><a href="#"><span class="glyphicon glyphicon-menu-hamburger"></span> AboutUs</a></li>  
+        <li style="font-weight:bold"><a href="#"><span class="glyphicon glyphicon-earphone"></span> ContactUs</a></li>       
 
       </ul>
     </div>
@@ -75,7 +75,7 @@
 
 <div class="jumbotron">
   <div class="container-fluid text-center" style="height: 470px; ">
-    <h1 style="color:white; font-family:serif;">Smart Health Monitoring</h1>      
+    <h1 style="color:white; font-family:serif;font-weight:italic">Smart Health Monitoring</h1>      
     <p style="color:white; font-family:Helvetica Neue;">Your next step in health and wellness</p>
   </div>
 </div>
