@@ -65,7 +65,8 @@
 
         <li style="font-weight:bold"><a href="#myModal" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in" ></span> Login</a></li>
         <li style="font-weight:bold"><a href="#"><span class="glyphicon glyphicon-menu-hamburger"></span> AboutUs</a></li>  
-        <li style="font-weight:bold"><a href="#"><span class="glyphicon glyphicon-earphone"></span> ContactUs</a></li>       
+        <li style="font-weight:bold"><a href="#"><span class="glyphicon glyphicon-earphone"></span> ContactUs</a></li> 
+        <li style="font-weight:bold"><a href="blog.php"><span class="glyphicon glyphicon-book"></span> Blog</a></li>       
 
       </ul>
     </div>
@@ -76,7 +77,7 @@
 <div class="jumbotron">
   <div class="container-fluid text-center" style="height: 470px; ">
     <h1 style="color:white; font-family:serif;font-weight:italic">Smart Health Monitoring</h1>      
-    <p style="color:white; font-family:Helvetica Neue;">Your next step in health and wellness</p>
+    <p style="color:white;font-weight:italic; font-family:Helvetica Neue;">Your next step in health and wellness</p>
   </div>
 </div>
 

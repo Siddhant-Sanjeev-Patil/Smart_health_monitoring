@@ -44,9 +44,11 @@
     
 
   
-  	<div class="container row" >
 
-  		<div class="col-md-6" id="weather_today">
+
+    <div class="container row" id="results" style="margin-top:120px;">
+
+      <div class="col-md-6" >
       <?php
 
         /*if($_POST['location']==" " )
@@ -90,14 +92,13 @@
               */
 
               $formal_location=$loc_obj["results"][0]["formatted_address"];
-              echo "We are showing results for this location(".$formal_location.")<br>Were you looking for the same?<br>";
+              echo "<br><br><b>We are showing results for this location(".$formal_location.")<br><i>Were you looking for the same?</i><br>";
               echo "<br><br>";
           
               $link ="https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=".$lat.','.$lng.'&radius=500&type=doctor&key=AIzaSyDtRVL608rSdYKjmMIlgRNwRgkqDU0zhi0 ';              
                       
               $cont = file_get_contents($link);
-              $obj = json_decode($cont,true);
-              
+              $obj = json_decode($cont,true);              
               /*
               $doctor=$obj["results"][0]["name"];
               $doctor_address=$obj["results"][0]["vicinity"];
@@ -120,16 +121,28 @@
                {
                   if(!isset($obj["results"][$i]["name"]))
                   {
-                    echo "We were able to show only these many results. ";
+                    echo "<b>We were able to show only these many results.";
                     break;
                   }
                   else
                   {
-                    echo $obj["results"][$i]["name"];
+                   /* echo $obj["results"][$i]["name"];
                     echo "<br>";
                     echo $obj["results"][$i]["vicinity"];
                     echo "<br><br>";
+                    */
+                    
+                   
+                          echo '
+                          <div class="container">
+                              <div class="jumbotron3" style="background-color:#9CDEBA;font-size:20px;margin-left:20px;padding-left:20px;padding-top:25px;padding-bottom:25px;">
+                                  <b>'.$obj["results"][$i]["name"].
+                              '</div><br><br>';
+                          echo '<ul type="square" >
+                                 <li><b><i>Address:'.$obj["results"][$i]["vicinity"].
+                                 '</i></ul><br><hr></div>';
 
+                          
                   }  
 
 
@@ -137,11 +150,11 @@
                
              }
        
-      ?>  		
-  			
-  		</div>
+      ?>      
+        
+      </div>
 
-	</div>
+  </div>
 
  </body>
 </html>
