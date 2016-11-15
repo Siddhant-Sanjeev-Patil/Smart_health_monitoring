@@ -33,7 +33,8 @@
 					padding: 30px;
 					
 				}
-    		   body{
+    		   body
+           {
 						
 						-webkit-background-size: cover;
 						-moz-background-size: cover;
@@ -67,7 +68,7 @@
   
 
 
-    <div class="container row" id="results" style="margin-top:120px;">
+    <div class="container row" id="results">
 
       <div class="col-sm-12 col-md-12 col-xs-12 col-lg-12" >
       <?php
