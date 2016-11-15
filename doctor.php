@@ -41,6 +41,12 @@
 						background-size: cover;
 					}		
 
+           .fixedContainer
+         {    
+        position: fixed;    
+        margin-left: 10px;    
+        }
+
     </style>
 </head>
 
@@ -63,7 +69,7 @@
 
     <div class="container row" id="results" style="margin-top:120px;">
 
-      <div class="col-sm-12 col-md-6 col-xs-12 col-lg-6 " >
+      <div class="col-sm-12 col-md-12 col-xs-12 col-lg-12" >
       <?php
 
         
@@ -76,8 +82,12 @@
                     }
 
 
-              
-              $addr=str_replace(" ","+",$_POST['location']);
+              //$location_length = strlen($_POST['location'])  ;
+
+              //$addr=str_replace(" ","+",$_POST['location']);
+
+              //done to replace empty spaces by '+' sign as google api requires it.
+              $addr=urlencode($_POST['location']);          
               
               
               $location_url="https://maps.googleapis.com/maps/api/geocode/json?address=".$addr;
@@ -166,6 +176,30 @@
       ?>      
         
       </div>
+
+     <!-- <div class="col-md-6  col-lg-6 hidden-xs hidden-sm "  id="map" style="position:relative">
+                                        <?php 
+
+                                             /*if(isset($_POST['location']))
+                                             {
+
+                                                 echo '
+                                                    
+                                                      <div class="fixedContainer">
+                                                      <iframe 
+                                                        width="650"
+                                                        height="460"                                                        
+                                                        frameborder="0" style="border:0"
+                                                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAnPd6rDXQ8pUSBOkvy5TCI5PCDUFQXTdk
+                                                          &q='.$addr.'" allowfullscreen>
+
+                                                      </iframe></div>';
+
+                                             }   */                                
+
+                                         ?>
+                                </div>
+                                --> 
 
   </div>
 
