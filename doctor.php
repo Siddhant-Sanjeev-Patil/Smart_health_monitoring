@@ -4,15 +4,30 @@
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
 	<title>Doctor24x7</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Carter+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Marcellus" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/4ade0e5ef1.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDmFqQa3GmRdYRtITKJnv3qF3-tsL5H2A&v=3.exp&sensor=false&libraries=places"></script>
+  <script type="text/javascript">
+               function initialize() {
+                       var input = document.getElementById('location');
+                       var autocomplete = new google.maps.places.Autocomplete(input);
+               }
+               google.maps.event.addDomListener(window, 'load', initialize);
+       </script>
+
     <style type="text/css">  	
     	
-    		  #entry{
+    		  #entry
+          {
 
 					margin-top: 50px;
 					padding: 30px;
@@ -48,100 +63,98 @@
 
     <div class="container row" id="results" style="margin-top:120px;">
 
-      <div class="col-md-6" >
+      <div class="col-sm-12 col-md-6 col-xs-12 col-lg-6 " >
       <?php
 
-        /*if($_POST['location']==" " )
-        {
-        echo " Enter the address above...";
-        }
-            */if (isset($_POST['submit_mes'])) 
+        
+            if (isset($_POST['submit_mes'])) 
               {
 
                 if($_POST['location']==" " )
                     {
                       echo " Enter the address above...";
-                    }//not working....why?
+                    }
 
 
-              //$location_length = strlen($_POST['location'])  ;
+              
               $addr=str_replace(" ","+",$_POST['location']);
-              //done to replace empty spaces by '+' sign as google api requires it.
+              
               
               $location_url="https://maps.googleapis.com/maps/api/geocode/json?address=".$addr;
 
-              //https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=500&type=restaurant&name=cruise&key=YOUR_API_KEY
+              
 
               $loc_cont = file_get_contents($location_url);
               $loc_obj = json_decode($loc_cont,true);          
 
               $lat=$loc_obj["results"][0]["geometry"]["location"]["lat"];
-              /*
-              if(!isset($lat))
-                  {
-                    echo "We were not able identify this location. ";
-                    
-                  }
-              */
+              
               $lng=$loc_obj["results"][0]["geometry"]["location"]["lng"];
-              /*if(!isset($lng))
-                  {
-                    echo "We were not able identify this location. ";
-                    
-                  }
-              */
+              
 
               $formal_location=$loc_obj["results"][0]["formatted_address"];
-              echo "<br><br><b>We are showing results for this location(".$formal_location.")<br><i>Were you looking for the same?</i><br>";
+
+             
+              echo "<br>
+                     <div class='container-fluid' style='font-family:'Marcellus',serif;'>
+                        <b><i>We are showing results for this location(".$_POST['location'].")</b></i>
+                     </div>";
+                      
               echo "<br><br>";
           
-              $link ="https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=".$lat.','.$lng.'&radius=500&type=doctor&key=AIzaSyDtRVL608rSdYKjmMIlgRNwRgkqDU0zhi0 ';              
+              $link ="https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=".$lat.','.$lng.'&radius=2000&type=doctor&key=AIzaSyDtRVL608rSdYKjmMIlgRNwRgkqDU0zhi0 ';              
                       
               $cont = file_get_contents($link);
               $obj = json_decode($cont,true);              
-              /*
-              $doctor=$obj["results"][0]["name"];
-              $doctor_address=$obj["results"][0]["vicinity"];
-              echo $doctor;
-              echo "<br>";
-              echo $doctor_address;
-              */
-              /*$doctor=$obj["results"];
-
-              foreach ($obj["results"] as $key )
-               {
-                        # code...
-                  echo $key->name;
-                  echo "<br>";
-                  echo $key->vicinity;
-
-               }
-               */
-               for($i=0;$i<15;$i++)
+              
+               for($i=0;$i<30;$i++)
                {
                   if(!isset($obj["results"][$i]["name"]))
                   {
-                    echo "<b>We were able to show only these many results.";
+                    echo "<b>We were able to show only these many results.</b><br><br><br><br>";
                     break;
                   }
                   else
                   {
-                   /* echo $obj["results"][$i]["name"];
-                    echo "<br>";
-                    echo $obj["results"][$i]["vicinity"];
-                    echo "<br><br>";
-                    */
-                    
                    
+                    
+                          $place_ref=$obj["results"][$i]["place_id"];
+                          //echo $place_ref;
+                          $place_details_url="https://maps.googleapis.com/maps/api/place/details/json?placeid=".$place_ref.'&key=AIzaSyDtRVL608rSdYKjmMIlgRNwRgkqDU0zhi0';
+                           $details_cont = file_get_contents($place_details_url);
+                           $details_obj = json_decode($details_cont,true); 
+
                           echo '
-                          <div class="container">
+                          <div class="container-fluid">
                               <div class="jumbotron3" style="background-color:#9CDEBA;font-size:20px;margin-left:20px;padding-left:20px;padding-top:25px;padding-bottom:25px;">
                                   <b>'.$obj["results"][$i]["name"].
-                              '</div><br><br>';
+                              '</div></b><br><br>';
                           echo '<ul type="square" >
-                                 <li><b><i>Address:'.$obj["results"][$i]["vicinity"].
-                                 '</i></ul><br><hr></div>';
+                                 <li><b><i>Address:'.$obj["results"][$i]["vicinity"].'</i></b><br></li>';
 
+                            if (isset($details_obj["result"]["formatted_phone_number"])) 
+                                  {
+                                       echo '<li><b><i>Contact:'.$details_obj["result"]["formatted_phone_number"].'</i></b><br></li>'  ;                                 
+                                 }
+                            if(isset($details_obj["result"]["website"]))    
+                            {
+                                       echo '<li><b><i>Website:<a target="_blank" href='.$details_obj["result"]["website"].'>Open in a new tab. </a></i></b><br></li>';
+                            } 
+                                 
+                                 if(isset($details_obj["result"]["rating"]))
+                            {
+                                       echo '<li><b><i>Ratings:'.$details_obj["result"]["rating"].'</i></b><br></li>';
+
+                            }
+                            
+                            if(isset($details_obj["result"]["url"]))
+                            {
+                                      echo '<li><b><i>Find on map:<a target="_blank" href='.$details_obj["result"]["url"].'>Open in a new tab.</a></i></b><br></li>';
+
+                            }
+
+                                 
+                                 echo "</ul><br><hr></div>";
                           
                   }  
 
