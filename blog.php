@@ -62,7 +62,7 @@ Include ('connect.php');
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active "><a href="#">Home</a></li>
+        <li class="active "><a href="index.php">Home</a></li>
    
         <li><a href="#"><span class="glyphicon glyphicon-search"></span> Search</a></li>     
       </ul>
@@ -136,8 +136,8 @@ Include ('connect.php');
           
           while($row = $results->fetch_array()) {
               echo '<br>';
-              echo '<div class="container-fluid">'.$row["blog_title"].'</div>';
-              echo '<div class="container-fluid">'.$row["posts"].'</div>';
+              echo '<div class="container-fluid">'.$row["blog_title"].'</div><br>';
+              echo '<div class="container-fluid">'.$row["posts"].'</div><br>';
               
 
           }  

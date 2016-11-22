@@ -6,7 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript">
+    $(function(){
+  $('#carousel-example-generic').carousel();
+});
+  </script>
 
   <style type="text/css">
 
@@ -16,6 +22,43 @@
       /*margin-top: 50px;*/
       color: black;
       background: url("smart_health_pics/pics/maxresdefault.jpg") no-repeat center center; 
+     -webkit-background-size: 100% 100%;
+     -moz-background-size: 100% 100%;
+     -o-background-size: 100% 100%;
+      background-size: 100% 100%;
+
+     }
+
+     #sym_detector {
+      /*margin-bottom: 30px; */
+      
+      /*margin-top: 50px;*/
+      color: black;
+      background: url("smart_health_pics/pics/sym_detect.jpg") no-repeat center center; 
+     -webkit-background-size: 100% 100%;
+     -moz-background-size: 100% 100%;
+     -o-background-size: 100% 100%;
+      background-size: 100% 100%;
+
+     }
+
+     #nearby{
+      /*margin-bottom: 30px; */
+      
+      /*margin-top: 50px;*/
+      color: black;
+      background: url("smart_health_pics/pics/doc2.jpg") no-repeat center center; 
+     -webkit-background-size: 100% 100%;
+     -moz-background-size: 100% 100%;
+     -o-background-size: 100% 100%;
+      background-size: 100% 100%;
+
+     }
+
+     #bloodbank{
+
+      color: black;
+      background: url("smart_health_pics/pics/bb.jpg") no-repeat center center; 
      -webkit-background-size: 100% 100%;
      -moz-background-size: 100% 100%;
      -o-background-size: 100% 100%;
@@ -58,15 +101,14 @@
       <ul class="nav navbar-nav">
         <li class="active "><a href="#">Home</a></li>
    
-        <li><a href="#"><span class="glyphicon glyphicon-search"></span> Search</a></li>     
+        <!--<li><a href="#"><span class="glyphicon glyphicon-search"></span> Search</a></li>--> 
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li style="font-weight:bold"><a href="signup.php"><span class="glyphicon glyphicon-user"></span> SignUp</a></li>
+       <!-- <li style="font-weight:bold"><a href="signup.php"><span class="glyphicon glyphicon-user"></span> SignUp</a></li>
 
-        <li style="font-weight:bold"><a href="#myModal" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in" ></span> Login</a></li>
+        <li style="font-weight:bold"><a href="#myModal" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in" ></span> Login</a></li>-->
         <li style="font-weight:bold"><a href="#"><span class="glyphicon glyphicon-menu-hamburger"></span> AboutUs</a></li>  
-        <li style="font-weight:bold"><a href="#"><span class="glyphicon glyphicon-earphone"></span> ContactUs</a></li> 
-        <li style="font-weight:bold"><a href="blog.php"><span class="glyphicon glyphicon-book"></span> Blog</a></li>       
+        <li style="font-weight:bold"><a href="discussion_forum/create_topic.php"><span class="glyphicon glyphicon-list-alt"></span> DiscussionForum</a></li>       
 
       </ul>
     </div>
@@ -81,7 +123,7 @@
   </div>
 </div>
 
-
+<!--
 <div class="container-fluid text-center" style="background-color: #CFEDC9">
 	<div id="brief">
 	<h2 style="text-align: center; color:green ; ";>What we offer?</h2>
@@ -91,8 +133,27 @@
 	</p>	
 	</div>
 </div>
+-->
+<div class="jumbotron" id="sym_detector">
+  <div class="container-fluid text-right" style="height: 470px;">
+    <h1 style="color:white; font-family:serif;font-weight:italic">Online Health Checkup</h1>      
+    <p style="color:white;font-weight:italic; font-family:Helvetica Neue;">ahsgkhask</p>
+  </div>
+</div>
 
+<div class="jumbotron" id="nearby">
+  <div class="container-fluid text-left" style="height: 470px; ">
+    <h1 style="color:white; font-family:serif;font-weight:italic">Find doctors Nearby..</h1>      
+    <p style="color:white;font-weight:italic; font-family:Helvetica Neue;">Your next step in health and wellness</p>
+  </div>
+</div>
 
+<div class="jumbotron" id="bloodbank">
+  <div class="container-fluid text-left" style="height: 470px; ">
+    <h1 style="color:white; font-family:serif;font-weight:italic">Find bloodbanks Nearby..</h1>      
+    <p style="color:white;font-weight:italic; font-family:Helvetica Neue;">Your next step in health and wellness</p>
+  </div>
+</div>
 
 
 </body>
