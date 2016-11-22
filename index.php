@@ -108,7 +108,7 @@
 
         <li style="font-weight:bold"><a href="#myModal" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in" ></span> Login</a></li>-->
         <li style="font-weight:bold"><a href="#"><span class="glyphicon glyphicon-menu-hamburger"></span> AboutUs</a></li>  
-        <li style="font-weight:bold"><a href="#"><span class="glyphicon glyphicon-list-alt"></span> DiscussionForum</a></li>       
+        <li style="font-weight:bold"><a href="discussion_forum/create_topic.php"><span class="glyphicon glyphicon-list-alt"></span> DiscussionForum</a></li>       
 
       </ul>
     </div>
