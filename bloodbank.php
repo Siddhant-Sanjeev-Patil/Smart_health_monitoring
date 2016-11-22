@@ -24,6 +24,7 @@
 						-moz-background-size: cover;
 						-o-background-size: cover;
 						background-size: cover;
+<<<<<<< HEAD
 					}	
 
            .navbar
@@ -39,11 +40,15 @@
 
           }
 	
+=======
+					}		
+>>>>>>> 48b58744e4b6f90daf70f303617b8b6732cab4ea
 
     </style>
 </head>
 
 <body >
+<<<<<<< HEAD
 
    <nav class="navbar navbar-inverse navbar-fixed-top" >
   <div class="container-fluid">
@@ -72,6 +77,8 @@
     </div>
   </div>
   </nav>
+=======
+>>>>>>> 48b58744e4b6f90daf70f303617b8b6732cab4ea
    
    <div class="container" id="entry" >
       <form class="form-group " method="post">
@@ -185,21 +192,38 @@
                               <div class="jumbotron3" style="background-color:#9CDEBA;font-size:20px;margin-left:20px;padding-left:20px;padding-top:25px;padding-bottom:25px;">
                                   <b>'.$obj["records"][$i]["h_name"].
                               '</div></b><br><br>';
+<<<<<<< HEAD
                           echo '<ul type="square">
                                     <li><b><i>Address:'.$obj["records"][$i]["address"].'</i></li></b></ul><br>';
+=======
+                          echo '<ul type="square" >
+                                 <li><b><i>Address:'.$obj["records"][$i]["address"].
+                                 '</i></ul><br>';
+>>>>>>> 48b58744e4b6f90daf70f303617b8b6732cab4ea
                          
                            if (isset($obj["records"][$i]["contact"])) 
                                   {
                                        echo '<ul type="square">
+<<<<<<< HEAD
                                                 <li><b><i>Contact:'.$obj["records"][$i]["contact"].'</i></li></ul><br>'  ;                                 
+=======
+                                            <li><b><i>Contact:'.$obj["records"][$i]["contact"].'</i></ul><br>'  ;                                 
+>>>>>>> 48b58744e4b6f90daf70f303617b8b6732cab4ea
                                  }
                           
                           if (isset($obj["records"][$i]["pincode"])) 
                                   {
                                        echo '<ul type="square" >
+<<<<<<< HEAD
                                                     <li><b><i>pincode:'.$obj["records"][$i]["pincode"].'</i></li></ul><br>';                              
                                  }
                             echo "</ul><br><hr></div>";
+=======
+                                 <li><b><i>pincode:'.$obj["records"][$i]["pincode"].
+                                 '</i></ul><br>';                              
+                                 }
+                           
+>>>>>>> 48b58744e4b6f90daf70f303617b8b6732cab4ea
 
 
                           
